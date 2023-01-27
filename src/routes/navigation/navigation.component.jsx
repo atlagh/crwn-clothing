@@ -9,15 +9,14 @@ import CartIcon from '../../components/cart-icon/cart-icon.component';
 import CartDropdown from '../../components/cart-dropdown/cart-dropdown.component';
 
 const Navigation = () => {
-
+  
   const {currentUser} = useContext(UserContext);
   const { isCartOpen } = useContext(CartContext);
-
     return(
       <Fragment>
-        <div className='navigation'>
+        <div className='navigation' >
             <Link className='logo-container' to='/'>
-                <CrwnLogo className='logo' />
+                <CrwnLogo  className='logo' />
             </Link>
             <div className='nav-links-container'>
                 <Link className='nav-link' to='/shop'>
