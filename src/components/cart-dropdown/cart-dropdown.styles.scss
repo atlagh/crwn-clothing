@@ -1,16 +1,30 @@
+.hide{
+  visibility: hidden;
+  &:active{
+    visibility: visible;
+  }
+}
+
 .cart-dropdown-container {
     position: absolute;
     width: 240px;
     height: 340px;
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 10px;
     border: 1px solid black;
     background-color: white;
     top: 90px;
     right: 40px;
     z-index: 5;
+    &:hover{
+      visibility: visible;
+    }
+    &:active{
+      visibility: visible;
+    }
     
+
   
     .empty-message {
       font-size: 18px;
@@ -19,9 +33,10 @@
   
     .cart-items {
       height: 240px;
+      margin-right: 10px;
       display: flex;
       flex-direction: column;
-      overflow: hidden;
+      overflow: scroll;
 
 
         &::-webkit-scrollbar {
@@ -50,9 +65,7 @@
           background: black;
         }
 
-        &:hover{
-          overflow: auto;
-        }
+
     }
       
   
