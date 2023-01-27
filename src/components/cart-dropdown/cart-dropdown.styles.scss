@@ -20,10 +20,43 @@
       height: 240px;
       display: flex;
       flex-direction: column;
-      overflow: auto;
+      overflow: hidden;
+
+
+        &::-webkit-scrollbar {
+          height:5px;
+          width: 8px;
+        }
+        &::-webkit-scrollbar-track {
+          background: rgba(0,0,0,0);
+
+          &:hover{
+            background: rgba(0,0,0,0.1);
+          }
+        }
+        
+        &::-webkit-scrollbar-thumb {
+          border-radius: 10px;
+          background: rgb(220, 220, 220);
+          border: 1px solid #aaa;
+        }
+        
+        &::-webkit-scrollbar-thumb:hover {
+          background: #fff;
+        }
+        
+        &::-webkit-scrollbar-thumb:active {
+          background: black;
+        }
+
+        &:hover{
+          overflow: auto;
+        }
     }
+      
   
     button {
       margin-top: auto;
     }
   }
+
