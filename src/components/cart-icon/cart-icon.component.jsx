@@ -5,9 +5,7 @@ import './cart-icon.styles.scss';
 
 const CartIcon = () => {
     const {isCartOpen, setIsCartOpen, cartCount} = useContext(CartContext);
-
     const refOne = useRef(null);
-
     useEffect(()=> {
         document.addEventListener("click", handleClickOutside, true)
     });
@@ -17,18 +15,13 @@ const CartIcon = () => {
             setIsCartOpen(false);
         }
     }
-    
     function toggleIsCartOpen(){
         setIsCartOpen(!isCartOpen);
-
     }
-
     return(
         <div className='cart-icon-container' ref={refOne} onClick={toggleIsCartOpen}>
             <ShopIcon className='shopping-icon'/>
             <span className='item-count'>{cartCount}</span>
         </div>
-    )
-}
-
+    )}
 export default CartIcon;
