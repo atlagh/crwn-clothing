@@ -1,8 +1,5 @@
 .hide{
   visibility: hidden;
-  &:active{
-    visibility: visible;
-  }
 }
 
 .cart-dropdown-container {
@@ -18,9 +15,6 @@
     right: 40px;
     z-index: 5;
     &:hover{
-      visibility: visible;
-    }
-    &:active{
       visibility: visible;
     }
     
