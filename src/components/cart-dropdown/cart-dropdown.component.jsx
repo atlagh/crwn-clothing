@@ -11,7 +11,7 @@ const CartDropdown = () => {
     const navigate = useNavigate();
 
 
-  const goToCheckoutHandler = () => {
+  const goToCheckoutHandler = () => { 
     navigate('/checkout');
   }
     return(
