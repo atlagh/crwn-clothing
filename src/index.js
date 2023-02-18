@@ -6,6 +6,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { UserProvider } from './contexts/user.context';
 import { CategoriesProvider } from './contexts/categories.context';
 import { CartProvider } from './contexts/cart.context';
+import * as serviceworkerRegistration from './serviceWorkerRegistration';
 
 const rootElement = document.getElementById('root');
 
@@ -23,3 +24,5 @@ render(
   </React.StrictMode>,
   rootElement
 );
+
+serviceworkerRegistration.register();
